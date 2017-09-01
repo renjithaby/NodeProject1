@@ -11,7 +11,8 @@ var users = require('./routes/users');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest1');
+//var db = monk('localhost:27017/nodetest1');
+var db = monk('mongodb://heroku_f0w8v6j0:iogo6jcun3fupmhlk0sfj1q2np@ds121014.mlab.com:21014/heroku_f0w8v6j0');
 
 var app = express();
 
