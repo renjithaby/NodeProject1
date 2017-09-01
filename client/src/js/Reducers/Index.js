@@ -7,11 +7,11 @@ import UsersListReducer from './UsersListReducer';
 import UserDataReducer from './UserDataReducer';
 import AuthDataReducer from './AuthDataReducer';
 
-const TodoApp = combineReducers({
+const AppReducer = combineReducers({
 
     usersList : UsersListReducer,
     userData  : UserDataReducer,
     authData  : AuthDataReducer
 })
 
-export default TodoApp
+export default AppReducer

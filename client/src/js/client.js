@@ -5,7 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Main  from "./components/Main.js";
 import { createStore,applyMiddleware } from 'redux';
-import TodoApp from './reducers';
+import AppReducer from './Reducers';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route ,Switch, Link, hashHistory,browserHistory } from 'react-router-dom';
@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Route ,Switch, Link, hashHistory,browserHistor
 import {LoginContainer} from "./components/containers/LoginContainer";
 
 
-let store = createStore(TodoApp,applyMiddleware(thunk));
+let store = createStore(AppReducer,applyMiddleware(thunk));
 
 const app = document.getElementById("app");
 ReactDOM.render(
