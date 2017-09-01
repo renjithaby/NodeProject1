@@ -31,9 +31,10 @@ module.exports = function() {
                 }
             ]
         },
+    
         output: {
-            path: path.resolve(__dirname, 'src'),
-            publicPath: "/",
+            path: path.resolve(__dirname, 'public'),
+            publicPath: "/public/",
             filename: "client.min.js"
         },
         plugins: debug ? [] : [
