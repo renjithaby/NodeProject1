@@ -6,13 +6,25 @@ var loginId = null;
 
 
 
+router.get('/login', function (req, res, next) {
+    res.sendFile( path.resolve(__dirname, '..','client','build', 'index.html'));
+    // res.sendFile('../client/build/index.html');
+    //res.render('index', {title: 'Helloo World'});
+});
 
+router.get('/home', function (req, res, next) {
+    res.sendFile( path.resolve(__dirname, '..','client','build', 'index.html'));
+    // res.sendFile('../client/build/index.html');
+    //res.render('index', {title: 'Helloo World'});
+});
 /* GET home page. */
-/*router.get('/*', function (req, res, next) {
-    res.sendFile( path.join(__dirname, '../client/build', 'index.html'));
+router.get('*', function (req, res, next) {
+    res.sendFile( path.resolve(__dirname, '..','client','build', 'index.html'));
    // res.sendFile('../client/build/index.html');
     //res.render('index', {title: 'Helloo World'});
-});*/
+});
+
+
 
 /* GET Userlist page. */
 router.get('/userlist', function (req, res) {

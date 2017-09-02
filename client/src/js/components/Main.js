@@ -33,8 +33,8 @@ export default class Main extends React.Component{
             <div>
                 <h1> main main </h1>
                 <Switch>
-                <Route path="/Login" component={LoginContainer}/>
-                <Route path="/Home"  component = {HomeContainer}/>
+                <Route path="/login" component={LoginContainer}/>
+                <Route path="/home"  component = {HomeContainer}/>
                 <Route component={() => <LoginContainer/>}/>
                 </Switch>
             </div>

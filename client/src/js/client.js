@@ -18,7 +18,7 @@ let store = createStore(AppReducer,applyMiddleware(thunk));
 const app = document.getElementById("app");
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={browserHistory}>
+        <Router  history={browserHistory}>
             <Route path="/" component={() => <Main/>}/>
         </Router>
     </Provider>

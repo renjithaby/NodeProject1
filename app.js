@@ -38,11 +38,14 @@ app.use(function(req,res,next){
     console.log(req.query);
     next();
 });
+
 const staticFiles = express.static(path.join(__dirname, './client/build'))
 app.use(staticFiles);
-app.use('/*', staticFiles);
+
+
 
 app.use('/', index);
+//app.use('*', staticFiles);
 
 app.use('/users', users);
 

@@ -34,7 +34,7 @@ module.exports = function() {
 
         output: {
             path: path.resolve(__dirname, 'build'),
-            publicPath: "/build/",
+            publicPath: "/",
             filename: "client.min.js"
         },
         plugins: debug ? [] : [
