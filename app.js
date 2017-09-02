@@ -38,7 +38,11 @@ app.use(function(req,res,next){
     console.log(req.query);
     next();
 });
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '.', 'client','build', 'index.html'));
+});
 app.use('/', index);
+
 app.use('/users', users);
 
 // catch 404 and forward to error handler

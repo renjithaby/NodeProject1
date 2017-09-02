@@ -1,15 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 var loginId = null;
 
 
+
+
 /* GET home page. */
-router.get('/*', function (req, res, next) {
+/*router.get('/*', function (req, res, next) {
     res.sendFile( path.join(__dirname, '../client/build', 'index.html'));
    // res.sendFile('../client/build/index.html');
     //res.render('index', {title: 'Helloo World'});
-});
+});*/
 
 /* GET Userlist page. */
 router.get('/userlist', function (req, res) {
