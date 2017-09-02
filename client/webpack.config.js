@@ -31,10 +31,10 @@ module.exports = function() {
                 }
             ]
         },
-    
+
         output: {
-            path: path.resolve(__dirname, 'public'),
-            publicPath: "/public/",
+            path: path.resolve(__dirname, 'build'),
+            publicPath: "/build/",
             filename: "client.min.js"
         },
         plugins: debug ? [] : [
