@@ -38,9 +38,10 @@ app.use(function(req,res,next){
     console.log(req.query);
     next();
 });
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '.', 'client','build', 'index.html'));
-});
+const staticFiles = express.static(path.join(__dirname, './client/build'))
+app.use(staticFiles);
+app.use('/*', staticFiles);
+
 app.use('/', index);
 
 app.use('/users', users);
