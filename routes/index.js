@@ -5,8 +5,9 @@ var loginId = null;
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Helloo World'});
+router.get('/*', function (req, res, next) {
+    res.send('../client/build/index.html');
+    //res.render('index', {title: 'Helloo World'});
 });
 
 /* GET Userlist page. */
